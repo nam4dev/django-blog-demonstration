@@ -1,7 +1,0 @@
-{
-  "name": "django-blog-demonstration",
-  "description": "Quick demonstration of Django to build a blog from scratch",
-  "stack": "heroku-18",
-  "image": "heroku/python",
-  "keywords": ["python", "django", "bulma"]
-}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card ">
+        <div class="card-content">
+            <p class="title" style="color: #0a0a0a !important;">{{ article.title }}</p>
+            <p class="subtitle" style="color: #0a0a0a !important;">{{ article.author }} | {{ article.created }} </p>
+
+            <div class="content">
+                {{ article.content | safe }}
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a href="{% url 'home'  %}" class="card-footer-item">Back to list</a>
+        </footer>
+    </div>
+{% endblock content %}

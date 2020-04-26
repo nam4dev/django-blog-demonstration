@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for article in article_list %}
+        <div class="card">
+            <div class="card-content">
+                <p class="title" style="color: #0a0a0a !important;">{{ article.title }}</p>
+                <p class="subtitle" style="color: #0a0a0a !important;">{{ article.author }} | {{ article.created}} </p>
+                <div class="content">
+                    {{ article.content | slice:":50" }}...
+                </div>
+            </div>
+            <footer class="card-footer">
+                <a href="{% url 'article_detail' article.slug  %}" class="card-footer-item">Read More &rarr;</a>
+            </footer>
+        </div>
+        <div style="height: 15px; width: 100%;"></div>
+    {% endfor %}
+{%endblock%}

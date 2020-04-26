@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Django Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar" role="navigation" aria-label="dropdown navigation">
+    <a class="navbar-item" href="{% url 'home' %}">
+        <img src="https://img.pngio.com/how-to-use-static-files-in-django-ashish-sharma-medium-django-png-600_261.png"
+             alt="Django Python Computer Icons Logo Portable Network Graphics PNG ..."
+             width="112" height="28">
+    </a>
+
+    <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+            Useful Links
+        </a>
+
+        <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.djangoproject.com/start/" target="_blank">
+                Django Framework
+            </a>
+            <a class="navbar-item" href="https://github.com/nam4dev/django-blog-demonstration" target="_blank">
+                Project on Github
+            </a>
+            <a class="navbar-item" href="https://bulma.io/" target="_blank">
+                Bulma CSS
+            </a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero is-dark is-bold is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                An Awesome Blog :)
+            </h1>
+            <h2 class="subtitle">
+                You will Love Django As much as I do..! &nbsp
+            </h2>
+            <div class="columns">
+                <div class="column is-three-quarters">
+                    {% block content %}
+                        <!-- Content Goes here -->
+                    {% endblock content %}
+                </div>
+                <div class="column">
+                    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Django Blog Demonstration</strong> by <a href="https://github.com/nam4dev">M. Namgyal BRISSON</a>. The source code is licensed under
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a> license.
+        </p>
+    </div>
+</footer>
+</body>
+</html>
